@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core'
 import { CommonModule } from '@angular/common'
 import { ElementsListComponent } from './elements-list.component'
+import { ElementTileModule } from '../element-tile/element-tile.module'
 
 
 
@@ -9,7 +10,8 @@ import { ElementsListComponent } from './elements-list.component'
     ElementsListComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ElementTileModule
   ],
   exports: [ElementsListComponent]
 })
