@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'io-element-tile',
@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./element-tile.component.scss']
 })
 export class ElementTileComponent implements OnInit {
+  @Input() item: any
 
   constructor() { }
 

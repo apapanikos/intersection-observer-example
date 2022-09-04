@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core'
 import { CommonModule } from '@angular/common'
 import { ElementTileComponent } from './element-tile.component'
+import { LoaderModule } from '../loader/loader.module'
 
 
 
@@ -9,7 +10,8 @@ import { ElementTileComponent } from './element-tile.component'
     ElementTileComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    LoaderModule
   ],
   exports: [ElementTileComponent]
 })

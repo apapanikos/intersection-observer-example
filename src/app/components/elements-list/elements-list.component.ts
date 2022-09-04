@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./elements-list.component.scss']
 })
 export class ElementsListComponent implements OnInit {
+  items = [ ...Array(5).keys() ]
 
   constructor() { }
 

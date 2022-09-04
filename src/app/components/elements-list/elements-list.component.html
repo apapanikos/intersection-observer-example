@@ -1,3 +1,5 @@
 <div class="flex flex-nowrap flex-col items-center content-start">
-  <io-element-tile></io-element-tile>
+  <ng-container *ngFor="let item of items; let i = index">
+    <io-element-tile [item] = 'item'></io-element-tile>
+  </ng-container>
 </div>
