@@ -1,6 +1,5 @@
 import { AfterViewInit, Directive, ElementRef, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core'
 import { debounceTime, filter, map, of, shareReplay, Subject, switchMap, takeUntil, withLatestFrom } from 'rxjs'
-import { interSectionObserverSub } from '../configs/intersection-observer.factory'
 import { VisibilityStatus } from '../enums/visibility-status.enum'
 
 @Directive({
@@ -16,12 +15,12 @@ export class IntersectionObserverDirective implements OnInit, AfterViewInit, OnD
   private intersectionObserver: IntersectionObserver | undefined
 
   private isVisible = (element: HTMLElement) => {
-      const subject$ = new Subject<boolean>()
-      const observer = new IntersectionObserver(([entry]) => {
-        if (entry.isIntersecting) subject$.next(true)
-        observer.disconnect()
-      })
-      observer.observe(element)
+    const subject$ = new Subject<boolean>()
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) subject$.next(true)
+      observer.disconnect()
+    })
+    observer.observe(element)
     return subject$.asObservable()
   }
 

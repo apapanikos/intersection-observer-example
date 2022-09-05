@@ -1,25 +1,28 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { NO_ERRORS_SCHEMA } from '@angular/core'
+import { ComponentFixture, TestBed } from '@angular/core/testing'
+import { IntersectionObserverDirective } from 'src/app/directives/intersection-observer.directive'
 
-import { ElementTileComponent } from './element-tile.component';
+import { ElementTileComponent } from './element-tile.component'
 
 describe('ElementTileComponent', () => {
-  let component: ElementTileComponent;
-  let fixture: ComponentFixture<ElementTileComponent>;
+  let component: ElementTileComponent
+  let fixture: ComponentFixture<ElementTileComponent>
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ElementTileComponent ]
+      declarations: [ ElementTileComponent, IntersectionObserverDirective ],
+      schemas: [NO_ERRORS_SCHEMA]
     })
-    .compileComponents();
-  });
+    .compileComponents()
+  })
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ElementTileComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+    fixture = TestBed.createComponent(ElementTileComponent)
+    component = fixture.componentInstance
+    fixture.detectChanges()
+  })
 
   it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+    expect(component).toBeTruthy()
+  })
+})

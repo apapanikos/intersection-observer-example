@@ -8,7 +8,7 @@ import { VisibilityStatus } from 'src/app/enums/visibility-status.enum'
 })
 export class ElementsListComponent implements OnInit {
   items = [ ...Array(1000).keys() ]
-  visibilityStatus: {[key: number]: VisibilityStatus} = {}
+  visibilityStatus: {[key: number]: VisibilityStatus} = []
 
   constructor() { }
 
