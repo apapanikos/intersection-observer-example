@@ -1,5 +1,12 @@
 <div class="flex flex-nowrap flex-col items-center content-start">
-  <ng-container *ngFor="let item of items; let i = index">
-    <io-element-tile [item] = 'item'></io-element-tile>
+  <ng-container *ngFor="let item of items; trackBy:trackByIndex let index = index; ">
+    <io-element-tile
+      ioIntersectionObserver
+      [debounce] = '1000'
+      [threshold]= '0.5'
+      (visibilityChange)="onVisibilityChanged(index, $event)"
+      [item] = 'item'
+      [status]= 'visibilityStatus[index]'>
+    </io-element-tile>
   </ng-container>
 </div>

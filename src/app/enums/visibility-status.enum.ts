@@ -1,5 +1,5 @@
 export enum VisibilityStatus {
   visible = 'visible',
-  loading = 'loading',
-  pending = 'pending'
+  pending = 'pending',
+  notVisible = 'notVisible'
 }
